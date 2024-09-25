@@ -1,13 +1,12 @@
-module "s3_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
+provider "aws" {
+  region = "ap-northeast-1"
+}
 
-  bucket = "trfm-ssd-s3-test-state-000001"
-  acl    = "private"
+resource "aws_s3_bucket" "ssd_bucket" {
+  bucket = "ssd-trfm-bucket-test-state-00001"
 
-  control_object_ownership = true
-  object_ownership         = "ObjectWriter"
-
-  versioning = {
+  versioning {
     enabled = true
-  }
+}
+
 }
