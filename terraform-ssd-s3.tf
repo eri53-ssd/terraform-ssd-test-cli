@@ -20,4 +20,3 @@ resource "aws_s3_bucket_versioning" "ssd_bucket_cli_versioning" {
     status = "Eabled"
   }
 }
-}
