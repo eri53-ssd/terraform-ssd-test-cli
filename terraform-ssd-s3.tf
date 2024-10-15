@@ -17,6 +17,6 @@ resource "aws_s3_bucket_versioning" "ssd_bucket_cli_versioning" {
   bucket = aws_s3_bucket.ssd_bucket_cli.id
 
   versioning_configuration {
-    status = "Eabled"
+    status = "Enabled"
   }
 }
