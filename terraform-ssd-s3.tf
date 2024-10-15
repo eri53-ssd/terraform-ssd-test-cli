@@ -9,12 +9,15 @@ provider "aws" {
     # enabled = true
  #   enabled = false
 #}
-module "s3_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
+resource "aws_s3_bucket" "ssd_bucket_cli" {
+  bucket = "trfm-ssd-s3-test-state-cli-000001""
+}
 
-  bucket = "trfm-ssd-s3-test-state--cli-000001"
-  versioning = {
-    enabled = true
+resource "aws_s3_bucket_versioning" "ssd_bucket_cli_versioning" {
+  bucket = aws_s3_bucket.ssd_bucket_cli.id
+
+  versioning_configuration {
+    status = "Eabled"
   }
 }
 }
