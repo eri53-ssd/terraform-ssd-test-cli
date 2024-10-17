@@ -10,7 +10,6 @@ provider "aws" {
  #   enabled = false
 #}
 resource "aws_s3_bucket" "ssd_bucket_cli" {
-  #bucket = "trfm-ssd-s3-test-state-cli-000001"
   bucket = "trfm-ssd-s3-test-state-cli-000002"
 }
 
