@@ -19,4 +19,4 @@ provider "aws" {
 #  versioning_configuration {
 #    status = "Enabled"
 #  }
-}
+#}
